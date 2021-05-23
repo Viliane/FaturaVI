@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>630a56cf-8c52-44fe-a171-0bf52c9bf95c</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EasyNetQ" Version="5.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.3.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Configuration\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\building blocks\FVI.Core\FVI.Core.csproj" />
+    <ProjectReference Include="..\..\building blocks\FVI.WebApi.Core\FVI.WebApi.Core.csproj" />
+  </ItemGroup>
+
+</Project>
